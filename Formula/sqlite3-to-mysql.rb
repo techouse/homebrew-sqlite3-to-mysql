@@ -1,4 +1,4 @@
-class Sqlite3mysql < Formula
+class Sqlite3ToMysql < Formula
   include Language::Python::Virtualenv
 
   desc "Transfer data from SQLite to MySQL"
@@ -67,5 +67,6 @@ class Sqlite3mysql < Formula
 
   test do
     assert_match "Usage: sqlite3mysql [OPTIONS]", shell_output("#{bin}/sqlite3mysql --help")
+    assert_match "/sqlite3\-to\-mysql\s+\|\s2.1.6/", shell_output("#{bin}/sqlite3mysql --version")
   end
 end
