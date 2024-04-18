@@ -16,8 +16,8 @@ class Sqlite3ToMysql < Formula
   end
 
   resource "mysql-connector-python" do
-    url "https://github.com/mysql/mysql-connector-python/archive/refs/tags/8.3.0.tar.gz"
-    sha256 "968323a49d8100c5660a5f4d1f07a27982de07e6fe6cec21bcd55cfcacc9501e"
+    url "https://github.com/mysql/mysql-connector-python/archive/refs/tags/8.2.0.tar.gz"
+    sha256 "29a7cb0b24a4f5ccda597c211254db8377493e95e36ca4ee05b15dba6e9c6e78"
   end
 
   resource "packaging" do
