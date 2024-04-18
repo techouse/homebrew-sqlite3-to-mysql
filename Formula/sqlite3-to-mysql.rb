@@ -3,8 +3,8 @@ class Sqlite3ToMysql < Formula
 
   desc "Transfer data from SQLite to MySQL"
   homepage "https://github.com/techouse/sqlite3-to-mysql"
-  url "https://files.pythonhosted.org/packages/e1/a2/e6306667379193d5b6d4b78446cf787471d3ccb11ac91411cc407e285d13/sqlite3_to_mysql-2.1.7.tar.gz"
-  sha256 "ce7ea33bcf65b414c77445d16b008fdb8e6b69cb18678b52f4f0190fa7ba8206"
+  url "https://files.pythonhosted.org/packages/68/20/85fd19f442cbd816aa3819f8fe489286f02b723a641532a19be49ab018d7/sqlite3_to_mysql-2.1.9.tar.gz"
+  sha256 "b7837886f08564aff79f19963351f77e9f29d32330f70b73542e0fdb47a517c8"
   license "MIT"
 
   depends_on "python3"
@@ -16,18 +16,13 @@ class Sqlite3ToMysql < Formula
   end
 
   resource "mysql-connector-python" do
-    url "https://github.com/mysql/mysql-connector-python/archive/refs/tags/8.2.0.tar.gz"
-    sha256 "29a7cb0b24a4f5ccda597c211254db8377493e95e36ca4ee05b15dba6e9c6e78"
+    url "https://github.com/mysql/mysql-connector-python/archive/refs/tags/8.3.0.tar.gz"
+    sha256 "968323a49d8100c5660a5f4d1f07a27982de07e6fe6cec21bcd55cfcacc9501e"
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
-    sha256 "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"
-  end
-
-  resource "protobuf" do
-    url "https://files.pythonhosted.org/packages/ba/dd/f8a01b146bf45ac12a829bbc599e6590aa6a6849ace7d28c42d77041d6ab/protobuf-4.21.12.tar.gz"
-    sha256 "7cd532c4566d0e6feafecc1059d04c7915aec8e182d1cf7adee8b24ef1e2e6ab"
+    url "https://files.pythonhosted.org/packages/ee/b5/b43a27ac7472e1818c4bafd44430e69605baefe1f34440593e0332ec8b4d/packaging-24.0.tar.gz"
+    sha256 "eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9"
   end
 
   resource "pytimeparse2" do
@@ -46,18 +41,18 @@ class Sqlite3ToMysql < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/62/06/d5604a70d160f6a6ca5fd2ba25597c24abd5c5ca5f437263d177ac242308/tqdm-4.66.1.tar.gz"
-    sha256 "d88e651f9db8d8551a62556d3cff9e3034274ca5d66e93197cf2490e2dcb69c7"
+    url "https://files.pythonhosted.org/packages/ea/85/3ce0f9f7d3f596e7ea57f4e5ce8c18cb44e4a9daa58ddb46ee0d13d6bff8/tqdm-4.66.2.tar.gz"
+    sha256 "6cd52cdf0fef0e0f543299cfc96fec90d7b8a7e88745f411ec33eb44d5ed3531"
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/0c/1d/eb26f5e75100d531d7399ae800814b069bc2ed2a7410834d57374d010d96/typing_extensions-4.9.0.tar.gz"
-    sha256 "23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"
+    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
+    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
   end
 
   resource "Unidecode" do
-    url "https://files.pythonhosted.org/packages/80/5d/f156f6a7254ecc0549de0eb75f786d2df724c0310b97c825383517d2c98d/Unidecode-1.3.7.tar.gz"
-    sha256 "3c90b4662aa0de0cb591884b934ead8d2225f1800d8da675a7750cbc3bd94610"
+    url "https://files.pythonhosted.org/packages/f7/89/19151076a006b9ac0dd37b1354e031f5297891ee507eb624755e58e10d3e/Unidecode-1.3.8.tar.gz"
+    sha256 "cfdb349d46ed3873ece4586b96aa75258726e2fa8ec21d6f00a591d98806c2f4"
   end
 
   def install
