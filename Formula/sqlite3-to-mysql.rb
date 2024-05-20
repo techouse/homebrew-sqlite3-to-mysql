@@ -3,11 +3,12 @@ class Sqlite3ToMysql < Formula
 
   desc "Transfer data from SQLite to MySQL"
   homepage "https://github.com/techouse/sqlite3-to-mysql"
-  url "https://files.pythonhosted.org/packages/68/20/85fd19f442cbd816aa3819f8fe489286f02b723a641532a19be49ab018d7/sqlite3_to_mysql-2.1.9.tar.gz"
-  sha256 "b7837886f08564aff79f19963351f77e9f29d32330f70b73542e0fdb47a517c8"
+  url "https://files.pythonhosted.org/packages/5a/cf/e4cf35115ae320c7271e2953a0baf65bcdfed5a7bd7c7f1bfe637f97b112/sqlite3_to_mysql-2.1.10.tar.gz"
+  sha256 "2e6352fa8e3f4fcff71b7e29a9e085d067b81d81756ee655f90e700f1672ad25"
   license "MIT"
 
   depends_on "python3"
+  depends_on "python-setuptools"
   depends_on "sqlite"
 
   resource "click" do
@@ -16,8 +17,8 @@ class Sqlite3ToMysql < Formula
   end
 
   resource "mysql-connector-python" do
-    url "https://github.com/mysql/mysql-connector-python/archive/refs/tags/8.3.0.tar.gz"
-    sha256 "968323a49d8100c5660a5f4d1f07a27982de07e6fe6cec21bcd55cfcacc9501e"
+    url "https://github.com/mysql/mysql-connector-python/archive/refs/tags/8.4.0.tar.gz"
+    sha256 "52944d6fa84c903fd70723a47d2f8c3153c50ae91773f1584a7bd30606c58b35"
   end
 
   resource "packaging" do
@@ -41,8 +42,8 @@ class Sqlite3ToMysql < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/ea/85/3ce0f9f7d3f596e7ea57f4e5ce8c18cb44e4a9daa58ddb46ee0d13d6bff8/tqdm-4.66.2.tar.gz"
-    sha256 "6cd52cdf0fef0e0f543299cfc96fec90d7b8a7e88745f411ec33eb44d5ed3531"
+    url "https://files.pythonhosted.org/packages/5a/c0/b7599d6e13fe0844b0cda01b9aaef9a0e87dbb10b06e4ee255d3fa1c79a2/tqdm-4.66.4.tar.gz"
+    sha256 "e4d936c9de8727928f3be6079590e97d9abfe8d39a590be678eb5919ffc186bb"
   end
 
   resource "typing-extensions" do
