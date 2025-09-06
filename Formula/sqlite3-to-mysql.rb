@@ -3,8 +3,8 @@ class Sqlite3ToMysql < Formula
 
   desc "Transfer data from SQLite to MySQL"
   homepage "https://github.com/techouse/sqlite3-to-mysql"
-  url "https://files.pythonhosted.org/packages/6b/50/82641926711b607b3014e92fb762a3a354b5dd6a347da998f87df3eba39c/sqlite3_to_mysql-2.4.2.tar.gz"
-  sha256 "ff6228a93428393064d38ea5f2a1cba45cdf24231119f0bbfae47d5379a4c5e5"
+  url "https://files.pythonhosted.org/packages/84/4c/2570d2164b5771c683fd4c185f5e7d41dfa253c40345d2b1d9c9deeb6660/sqlite3_to_mysql-2.4.4.tar.gz"
+  sha256 "8011fe85c3f29e2dd30b20af5727c1f03f543d3dfc0644d8387e2b048e2f6fac"
   license "MIT"
 
   depends_on "python3"
@@ -34,11 +34,6 @@ class Sqlite3ToMysql < Formula
   resource "python-dateutil" do
     url "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz"
     sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
-  end
-
-  resource "types-python-dateutil" do
-    url "https://files.pythonhosted.org/packages/ef/88/d65ed807393285204ab6e2801e5d11fbbea811adcaa979a2ed3b67a5ef41/types_python_dateutil-2.9.0.20250516.tar.gz"
-    sha256 "13e80d6c9c47df23ad773d54b2826bd52dbbb41be87c3f339381c1700ad21ee5"
   end
 
   resource "pytimeparse2" do
