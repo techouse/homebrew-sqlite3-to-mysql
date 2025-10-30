@@ -3,8 +3,8 @@ class Sqlite3ToMysql < Formula
 
   desc "Transfer data from SQLite to MySQL"
   homepage "https://github.com/techouse/sqlite3-to-mysql"
-  url "https://files.pythonhosted.org/packages/fc/45/4b70883d25ce9ec3f0c834665c494ff2e0d65e07b7afe930a408e88c569e/sqlite3_to_mysql-2.5.1.tar.gz"
-  sha256 "c781af86371342729ca36f54d4d4490ee83e23c68e19cd5ded722206673d00e5"
+  url "https://files.pythonhosted.org/packages/67/5e/0c97d59d790e4bc13d8f9596692554a68197e20912f09dd26e3c15f64b95/sqlite3_to_mysql-2.5.2.tar.gz"
+  sha256 "3f637db9d7fc7b964fdf0bd67b7c64e977cebc33f0d15904630ca464dd8355ff"
   license "MIT"
 
   depends_on "python3"
@@ -12,13 +12,13 @@ class Sqlite3ToMysql < Formula
   depends_on "sqlite"
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz"
-    sha256 "27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"
+    url "https://files.pythonhosted.org/packages/46/61/de6cd827efad202d7057d93e0fed9294b96952e188f7384832791c7b2254/click-8.3.0.tar.gz"
+    sha256 "e7b8232224eba16f4ebe410c25ced9f7875cb5f3263ffc93cc3e8da705e229c4"
   end
 
   resource "mysql-connector-python" do
-    url "https://github.com/mysql/mysql-connector-python/archive/refs/tags/9.3.0.tar.gz"
-    sha256 "68b4fab8f4cdfc765228335b28fa9da8e3353dfe77e74d12880d96dd6b9799e9"
+    url "https://files.pythonhosted.org/packages/39/33/b332b001bc8c5ee09255a0d4b09a254da674450edd6a3e5228b245ca82a0/mysql_connector_python-9.5.0.tar.gz"
+    sha256 "92fb924285a86d8c146ebd63d94f9eaefa548da7813bc46271508fdc6cc1d596"
   end
 
   resource "packaging" do
@@ -42,8 +42,13 @@ class Sqlite3ToMysql < Formula
   end
 
   resource "simplejson" do
-    url "https://files.pythonhosted.org/packages/af/92/51b417685abd96b31308b61b9acce7ec50d8e1de8fbc39a7fd4962c60689/simplejson-3.20.1.tar.gz"
-    sha256 "e64139b4ec4f1f24c142ff7dcafe55a22b811a74d86d66560c8815687143037d"
+    url "https://files.pythonhosted.org/packages/41/f4/a1ac5ed32f7ed9a088d62a59d410d4c204b3b3815722e2ccfb491fa8251b/simplejson-3.20.2.tar.gz"
+    sha256 "5fe7a6ce14d1c300d80d08695b7f7e633de6cd72c80644021874d985b3393649"
+  end
+
+  resource "sqlglot" do
+    url "https://files.pythonhosted.org/packages/b5/3d/bf8b4a96b934c26ec83f94048ec201d17cd95fb3c2e6930bbcfaaaad6813/sqlglot-27.28.1.tar.gz"
+    sha256 "01c03da1aa0c7773002cfb4a58bd4b0656196e0164aee1d83104b3d3cc1475f3"
   end
 
   resource "tabulate" do
@@ -57,8 +62,8 @@ class Sqlite3ToMysql < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/d1/bc/51647cd02527e87d05cb083ccc402f93e441606ff1f01739a62c8ad09ba5/typing_extensions-4.14.0.tar.gz"
-    sha256 "8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"
+    url "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz"
+    sha256 "0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
   end
 
   resource "Unidecode" do
@@ -67,14 +72,6 @@ class Sqlite3ToMysql < Formula
   end
 
   def install
-    virtualenv_create(libexec, "python3")
-
-    resource("mysql-connector-python").stage do
-      cd "mysql-connector-python" do
-        system libexec/"bin/python3", *Language::Python.setup_install_args(libexec)
-      end
-    end
-
     virtualenv_install_with_resources
   end
 
