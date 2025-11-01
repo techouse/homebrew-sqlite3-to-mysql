@@ -7,7 +7,6 @@ class Sqlite3ToMysql < Formula
   sha256 "6073bb6435599da1b4bf671b33a271884c1b237234caa52f6b05b9dc79f8a48d"
   license "MIT"
 
-  depends_on "python-setuptools"
   depends_on "python@3.14"
 
   uses_from_macos "sqlite"
